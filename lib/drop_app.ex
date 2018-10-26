@@ -1,18 +1,8 @@
 defmodule DropApp do
-  @moduledoc """
-  Documentation for DropApp.
-  """
+  use Application
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> DropApp.hello
-      :world
-
-  """
-  def hello do
-    :world
+  def start(_type, _args) do
+    IO.puts("Starting application")
+    DropSup.start_link()
   end
 end
